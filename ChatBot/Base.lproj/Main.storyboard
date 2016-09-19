@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WvG-t2-UxE">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChatBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vVt-Bk-4uY"/>
+                    <connections>
+                        <segue destination="WvG-t2-UxE" kind="presentation" identifier="ToLogin" id="2Nv-KR-W4k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="JhH-73-viv">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="WvG-t2-UxE" customClass="LoginViewController" customModule="ChatBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r57-lb-9Nm"/>
+                        <viewControllerLayoutGuide type="bottom" id="lOb-QP-6Zj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bZS-Rc-dFc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fill the gap" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xg6-bw-pEv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ilt-yS-EGc"/>
+                                    <constraint firstAttribute="width" constant="156" id="qTP-Ax-Z2g"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk1-yX-4Zc">
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gk1-yX-4Zc" firstAttribute="centerX" secondItem="bZS-Rc-dFc" secondAttribute="centerX" id="L6s-Ne-QnG"/>
+                            <constraint firstItem="Xg6-bw-pEv" firstAttribute="centerX" secondItem="bZS-Rc-dFc" secondAttribute="centerX" id="NaJ-e1-rJQ"/>
+                            <constraint firstItem="Xg6-bw-pEv" firstAttribute="centerY" secondItem="bZS-Rc-dFc" secondAttribute="centerY" id="gx4-3K-S1Y"/>
+                            <constraint firstItem="Gk1-yX-4Zc" firstAttribute="top" secondItem="r57-lb-9Nm" secondAttribute="bottom" constant="110" id="yqw-MI-B47"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="textField" destination="Xg6-bw-pEv" id="M1m-WT-pCd"/>
+                        <segue destination="w3Q-nZ-lZ5" kind="show" identifier="ToChatSegue" id="vO3-yu-bOK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVu-rL-yt9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="-603.14842578710648"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dov-F5-epI">
+            <objects>
+                <navigationController storyboardIdentifier="Chat" automaticallyAdjustsScrollViewInsets="NO" id="w3Q-nZ-lZ5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hhR-tx-4KZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H2Q-7f-R98"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78K-6i-Dau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="137"/>
+        </scene>
+    </scenes>
+</document>
